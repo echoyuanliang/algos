@@ -37,6 +37,7 @@ func qSort2(src []int, first, last int) {
         for first < last {
             if src[last] < src[flag]{
                 src[last], src[flag] = src[flag], src[last]
+                flag = last
                 break
             }
 
@@ -46,6 +47,7 @@ func qSort2(src []int, first, last int) {
         for first < last {
            if src[first] > src[flag]{
                 src[first], src[flag] = src[flag], src[first]
+                flag = first
                 break
             }
 
@@ -62,5 +64,5 @@ func QSort(arr []int)  {
 }
 
 func QSort2(arr []int){
-    qSort(arr, 0, len(arr) - 1)
+    qSort2(arr, 0, len(arr) - 1)
 }
