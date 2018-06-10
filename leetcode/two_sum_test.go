@@ -8,12 +8,12 @@ import (
     "sync"
 )
 
-const TestCnt = 50000
+const TestRange = 50000
 
 func testTwoSum(t *testing.T){
     rand.Seed(time.Now().UnixNano())
-    randIntegers := rand.Perm(TestCnt)
-    rIdx, lIdx := rand.Intn(TestCnt), rand.Intn(TestCnt)
+    randIntegers := rand.Perm(TestRange)
+    rIdx, lIdx := rand.Intn(TestRange), rand.Intn(TestRange)
     sum := randIntegers[rIdx] + randIntegers[lIdx]
     ret := HashTwoSum(randIntegers, sum)
     if randIntegers[ret[0]] + randIntegers[ret[1]] != sum{
@@ -24,7 +24,7 @@ func testTwoSum(t *testing.T){
 
 func TestTwoSum(t *testing.T) {
     resLock := sync.WaitGroup{}
-
+    const TestCnt = 500
     for cnt := 0; cnt < TestCnt; cnt ++{
         go func(myCnt int){
             resLock.Add(1)
