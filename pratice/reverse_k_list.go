@@ -1,9 +1,8 @@
 package pratice
 
-
 func ReverseKList(l *List, k int) (*List) {
 
-    if l == nil || l.HeadNode == nil || l.HeadNode.NextNode == nil || k < 2{
+    if l == nil || l.HeadNode == nil || l.HeadNode.NextNode == nil || k < 2 {
         return l
     }
 
@@ -12,8 +11,8 @@ func ReverseKList(l *List, k int) (*List) {
     loopCnt := 1
     var lastTail *ListNode
 
-    for end != nil{
-        if loopCnt % k == 0 {
+    for end != nil {
+        if loopCnt%k == 0 {
             cur := start
             next := cur.NextNode
             for cur != end {
@@ -23,26 +22,26 @@ func ReverseKList(l *List, k int) (*List) {
                 next = tmp
             }
 
-            if lastTail != nil{
+            if lastTail != nil {
                 lastTail.NextNode = cur
-            }else{
+            } else {
                 l.HeadNode = cur
             }
 
             lastTail = start
             start = next
             end = next
-        }else{
+        } else {
             end = end.NextNode
         }
 
         loopCnt += 1
     }
 
-    if lastTail != nil{
-        if start != end{
+    if lastTail != nil {
+        if start != end {
             lastTail.NextNode = start
-        }else{
+        } else {
             lastTail.NextNode = nil
         }
     }

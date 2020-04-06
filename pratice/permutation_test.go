@@ -48,7 +48,6 @@ func TestRecursePermutation(t *testing.T) {
     }
 }
 
-
 func TestLoopPermutation(t *testing.T) {
     randIntegers := rand.Perm(TestCnt)
 
@@ -60,4 +59,3 @@ func TestLoopPermutation(t *testing.T) {
         t.Fatal(err)
     }
 }
-

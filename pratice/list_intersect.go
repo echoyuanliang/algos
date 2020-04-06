@@ -1,6 +1,5 @@
 package pratice
 
-
 func CheckListHasCycle(l *List) (*ListNode) {
     if l == nil || l.HeadNode == nil || l.HeadNode.NextNode == nil {
         return nil
@@ -112,8 +111,7 @@ func CheckCycleListIntersect(l1 *List, l2 *List, loopStart1 *ListNode, loopStart
 
 }
 
-
-func CheckListIntersect(l1 *List, l2 *List)(*ListNode){
+func CheckListIntersect(l1 *List, l2 *List) (*ListNode) {
     if l1 == nil || l1.HeadNode == nil {
         return nil
     }
@@ -125,9 +123,9 @@ func CheckListIntersect(l1 *List, l2 *List)(*ListNode){
     loopStartL1 := CheckListHasCycle(l1)
     loopStartL2 := CheckListHasCycle(l2)
 
-    if loopStartL1 == nil && loopStartL2 == nil{
+    if loopStartL1 == nil && loopStartL2 == nil {
         return CheckNoCycleListIntersect(l1, l2, nil)
-    }else if loopStartL1 != nil && loopStartL2 != nil{
+    } else if loopStartL1 != nil && loopStartL2 != nil {
         return CheckCycleListIntersect(l1, l2, loopStartL1, loopStartL2)
     }
 

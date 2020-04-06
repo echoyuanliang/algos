@@ -1,13 +1,10 @@
 package pratice
 
-
-type ListNode struct{
-    Val int
+type ListNode struct {
+    Val      int
     NextNode *ListNode
 }
 
-
-type List struct{
+type List struct {
     HeadNode *ListNode
 }
-

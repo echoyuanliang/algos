@@ -30,7 +30,7 @@ func TestHeadList(t *testing.T) {
 
     if res != nil {
         t.Fatal("check only head no cycle list no intersect failed")
-    }else{
+    } else {
         t.Log("check only head no cycle list no intersect ok")
     }
 
@@ -40,7 +40,7 @@ func TestHeadList(t *testing.T) {
 
     if res != nil {
         t.Fatal("check only head cycle and no cycle list no intersect failed")
-    }else{
+    } else {
         t.Log("check only head cycle and no cycle list no intersect ok")
     }
 
@@ -48,7 +48,7 @@ func TestHeadList(t *testing.T) {
     res = CheckListIntersect(l1, l2)
     if res != nil {
         t.Fatal("check only head cycle list no intersect failed")
-    }else{
+    } else {
         t.Log("check only head cycle list no intersect ok")
     }
 
@@ -57,7 +57,7 @@ func TestHeadList(t *testing.T) {
     res = CheckListIntersect(l1, l2)
     if res != l1.HeadNode {
         t.Fatal("check only head cycle list intersect failed")
-    }else{
+    } else {
         t.Log("check only head cycle list intersect ok")
     }
 
@@ -65,7 +65,7 @@ func TestHeadList(t *testing.T) {
     res = CheckListIntersect(l1, l2)
     if res != l1.HeadNode {
         t.Fatal("check only head no cycle list intersect failed")
-    }else{
+    } else {
         t.Log("check only head no cycle list intersect ok")
     }
 }
@@ -73,22 +73,22 @@ func TestHeadList(t *testing.T) {
 func TestNormalList(t *testing.T) {
     fmt.Println("TestNormalList start")
     initVal := 0
-    l1 := &List{HeadNode: &ListNode{Val:initVal, NextNode:nil}}
+    l1 := &List{HeadNode: &ListNode{Val: initVal, NextNode: nil}}
     n1 := l1.HeadNode
 
     for initVal != 5 {
         initVal += 1
-        n1.NextNode = &ListNode{Val:initVal, NextNode:nil}
+        n1.NextNode = &ListNode{Val: initVal, NextNode: nil}
         n1 = n1.NextNode
     }
 
     initVal = 0
-    l2 := &List{HeadNode: &ListNode{Val:initVal, NextNode:nil}}
+    l2 := &List{HeadNode: &ListNode{Val: initVal, NextNode: nil}}
     n2 := l2.HeadNode
 
     for initVal != 10 {
         initVal += 1
-        n2.NextNode = &ListNode{Val:initVal, NextNode:nil}
+        n2.NextNode = &ListNode{Val: initVal, NextNode: nil}
         n2 = n2.NextNode
     }
     fmt.Println("check normal start")
@@ -113,7 +113,6 @@ func TestNormalList(t *testing.T) {
         t.Fatalf("check no cycle list intersect failed")
     }
 
-
     n1.NextNode = l1.HeadNode
     n2.NextNode = l2.HeadNode
 
@@ -122,7 +121,6 @@ func TestNormalList(t *testing.T) {
     if res != nil {
         t.Fatalf("check  cycle list no intersect failed")
     }
-
 
     n1.NextNode = n2
 
