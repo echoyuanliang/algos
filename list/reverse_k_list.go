@@ -1,4 +1,4 @@
-package pratice
+package list
 
 func ReverseKList(l *List, k int) (*List) {
 

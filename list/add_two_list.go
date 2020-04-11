@@ -1,4 +1,4 @@
-package pratice
+package list
 
 func ReverseList(srcList *List) (*List) {
 

@@ -1,4 +1,4 @@
-package pratice
+package list
 
 type ListNode struct {
     Val      int

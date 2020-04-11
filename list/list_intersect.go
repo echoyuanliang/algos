@@ -1,4 +1,4 @@
-package pratice
+package list
 
 func CheckListHasCycle(l *List) (*ListNode) {
     if l == nil || l.HeadNode == nil || l.HeadNode.NextNode == nil {
