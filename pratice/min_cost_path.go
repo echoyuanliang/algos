@@ -2,23 +2,15 @@ package pratice
 
 import (
     "math"
-    "fmt"
-    "strings"
     "github.com/toolkits/slice"
 )
 
-func helpTest(arr []float64, rows int){
-    s := make([]string, len(arr))
-    for idx, val := range arr{
-        s[idx] = fmt.Sprintf("%f", val)
-    }
 
-    fmt.Printf("rows %d:\n", rows)
-    fmt.Println(strings.Join(s, " , "))
-}
+/**
+    https://www.geeksforgeeks.org/min-cost-path-dp-6/?ref=lbp
+*/
 
-
-func GetMiniNumPathSum(data [][]float64, m, n int) float64 {
+func GetMinCostPath(data [][]float64, m, n int) float64 {
     if m == 0 || n == 0{
         return 0
     }

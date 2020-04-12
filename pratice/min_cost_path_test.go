@@ -42,14 +42,14 @@ func printTestArr(arr [][] float64) {
     }
 }
 
-func TestGetMiniNumPathSum(t *testing.T) {
+func TestGetMinCostPath(t *testing.T) {
     m, n := 4, 5
     testArr := getTestArr(m, n)
     printTestArr(testArr)
-    miniNumPathSum := GetMiniNumPathSum(testArr, m, n)
+    miniNumPathSum := GetMinCostPath(testArr, m, n)
     fmt.Println(miniNumPathSum)
     reverseTestArr(testArr, m, n)
     printTestArr(testArr)
-    miniNumPathSum = GetMiniNumPathSum(testArr, m, n)
+    miniNumPathSum = GetMinCostPath(testArr, m, n)
     fmt.Println(miniNumPathSum)
 }
