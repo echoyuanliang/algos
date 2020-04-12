@@ -2,6 +2,9 @@ package pratice
 
 import "math"
 
+/**
+    https://www.geeksforgeeks.org/coin-change-dp-7/?ref=lbp
+ */
 func GetCoinChangeWays(target int, coinValues []int) int {
 
     targetList := make([]int, target+1)
@@ -27,6 +30,9 @@ func GetCoinChangeWays(target int, coinValues []int) int {
     return targetList[target]
 }
 
+/**
+    https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/?ref=lbp
+ */
 func GetMiniNumCoins(target int, coinValues []int) int {
 
     targetList := make([]int, target+1)
