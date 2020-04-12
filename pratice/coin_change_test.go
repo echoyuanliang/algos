@@ -5,7 +5,7 @@ import (
     "fmt"
 )
 
-func TestGetMiniNumCoins(t *testing.T) {
+func TestCoinChange(t *testing.T) {
     coinValues := []int{1,2,5,10}
 
     for target := 13; target < 194; target += 7{
