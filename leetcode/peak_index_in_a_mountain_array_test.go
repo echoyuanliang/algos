@@ -44,7 +44,6 @@ func TestPeakIndexInMountainArray(t *testing.T) {
         }
 
         for _, c := range tests {
-                PeakIndexInMountainArray(c.Input)
 
                 assert.Equal(t, c.Want, PeakIndexInMountainArray(c.Input))
         }
